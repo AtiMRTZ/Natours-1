@@ -45,8 +45,9 @@ body {
   text-align: center;
 }
 
+
 .heading-primary {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -60,6 +61,10 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  /*
+      animation-delay: 3s;
+      animation-iteration-count: 3;
+      */
 }
 
 .heading-primary--sub {
@@ -114,6 +119,7 @@ body {
   }
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -121,17 +127,26 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all 0.2s;
+  transition: all .2s;
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-  transform: translateY(-.03rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -156,11 +171,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 .btn--animated {
