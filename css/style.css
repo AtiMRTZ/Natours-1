@@ -100,7 +100,7 @@ body {
   margin-bottom: 4rem !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
+  margin-bottom: 8rem; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -244,6 +244,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
@@ -269,4 +273,4 @@ body {
   transform: skewY(-7deg);
   margin-top: -10rem; }
   .section-features > * {
-    transform: skewY(7deg); }
+    transform: skewY(-7deg); }
